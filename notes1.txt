@@ -1,0 +1,4 @@
+1. on the code exercise I put in 
+	int main(int argc, int argv[])
+   and it still worked?
+   It wasn't until I created the Makefile with the CFLAGS=-WALL until it corrected this.
