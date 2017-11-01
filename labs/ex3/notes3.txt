@@ -1,0 +1,4 @@
+So for the Makefile you need to tell it which file to make.
+Either in the Makefile with
+all:
+or do it in the commandline with make 'file', for instance make ex3
