@@ -1,7 +1,7 @@
 # cfiles
 
-These are lessons from C the Hardway.
+These are lessons from "Lear C the Hard Way." by Zed Shaw
 
 Get the book and we'll help you with it.
 
-But don't recommend using this crap code.
+I don't recommend using this crap code.
