@@ -1,0 +1,25 @@
+Questions:
+1. What is a enum for?
+	\\Define a set of int constants, what dat mean?
+
+2. When would you use this?
+	?: 	\\logical tenary, what dat mean?
+
+3. When would you use these bitwise operators?
+	& 	\\Bitwise and
+	|	\\Bitwise or
+	^	\\Bitwise xor
+	~	\\Bitwise 1's compliment
+	
+4. When is an & an address of or when is it a bitwise and?
+
+5. What is a -> struct dereference used for?
+
+6. When would you use a static and why?
+	\\preserve variable value after scope exits, what dat mean?
+
+7. Struct
+	\\Combine variables into a single record. What's a record? A variable?
+
+8. What is a union, when & why use it?
+	\\start a union statement
