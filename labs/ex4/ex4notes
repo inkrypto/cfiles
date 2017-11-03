@@ -1,9 +1,10 @@
 Questions:
 1. What is a enum for?
-	\\Define a set of int constants, what dat mean?
-
+	\\Define a set of int constants?
+	
 2. When would you use this?
 	?: 	\\logical tenary, what dat mean?
+		\\It means if then else in one line
 
 3. When would you use these bitwise operators?
 	& 	\\Bitwise and
@@ -14,12 +15,17 @@ Questions:
 4. When is an & an address of or when is it a bitwise and?
 
 5. What is a -> struct dereference used for?
+	\\you dereference pointers not variables
 
 6. When would you use a static and why?
 	\\preserve variable value after scope exits, what dat mean?
+	\\static means persist but change
+	\\constants dont change
 
 7. Struct
 	\\Combine variables into a single record. What's a record? A variable?
+	\\A way to encapsulate a bunch of variables in one label
 
 8. What is a union, when & why use it?
 	\\start a union statement
+	\\a union is a struct that can be accesssed one at a time
