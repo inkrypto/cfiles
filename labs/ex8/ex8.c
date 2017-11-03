@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
             printf("%s", argv[1]);
         }
         printf("\n");
-    } else {
+    }else {
         printf("You have too many arguments. You're lame!\n");
     }
 
