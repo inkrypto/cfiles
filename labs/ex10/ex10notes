@@ -1,25 +1,4 @@
 Ran the exercise but my output was weird:
-:~/brent/code/cfiles/labs/ex10$ ./ex10 motherfucker
-0: m is not a vowel
-1: 'O'
-1: 'U'
-1: 'Y'
-2: t is not a vowel
-3: h is not a vowel
-4: 'E'
-4: 'I'
-5: r is not a vowel
-6: f is not a vowel
-7: 'U'
-8: c is not a vowel
-9: k is not a vowel
-10: 'E'
-10: 'I'
-11: r is not a vowel
-ubuntu@ip-172-31-34-201:~/brent/code/cfiles/labs/ex10$ 
-ubuntu@ip-172-31-34-201:~/brent/code/cfiles/labs/ex10$ 
-ubuntu@ip-172-31-34-201:~/brent/code/cfiles/labs/ex10$ ./ex10 potato
-0: p is not a vowel
 1: 'O'
 1: 'U'
 1: 'Y'
@@ -29,4 +8,8 @@ ubuntu@ip-172-31-34-201:~/brent/code/cfiles/labs/ex10$ ./ex10 potato
 5: 'O'
 5: 'U'
 
-see how it pulled vowels not in the word? that's odd . . .     
+see how it pulled vowels not in the word? that's odd . . .    
+UPDATE: I forgot breaks
+Book reads, "Use uninitialized values in the switch" What does that mean?
+    not getting that
+ 
