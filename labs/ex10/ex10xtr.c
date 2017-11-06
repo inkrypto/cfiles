@@ -9,12 +9,21 @@ int main(int argc, char *argv[])
     }
 
     int i = 0;
-    for (i=0; argv[1][i] != '\0'; i++){
+    //Use ',' (comma) to initialize letter in the for-loop? This doesn't make sense:
+    for (,=0;argv[1][,] != '\0'; ,++)
+    //for (i=0; argv[1][i] != '\0'; i++){
+    /*ex10xtr.c:13:34: error: expected expression before ‘,’ token
+     for (,=0;argv[1][,] != '\0'; ,++)
+                                  ^*/
         char letter = argv[1][i];
 
         switch(letter){
             case 'a':
-            case 'A':
+            //this to lower extra credit didn't work
+            if ((i >= 65) && (i <= 90)){
+                    i+=32;
+                    return i;
+                }
                 printf("%d: 'A'\n",i);
                 break;
 

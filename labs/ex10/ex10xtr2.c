@@ -11,12 +11,15 @@ int main(int argc, char *argv[])
     int i = 0;
     for (i=0; argv[1][i] != '\0'; i++){
         char letter = argv[1][i];
-
+        
+        /*change switch to if/else
         switch(letter){
             case 'a':
             case 'A':
                 printf("%d: 'A'\n",i);
-                break;
+                break;*/
+
+        if 
 
             case 'e':
             case 'E':
