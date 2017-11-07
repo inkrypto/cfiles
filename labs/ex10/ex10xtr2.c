@@ -19,40 +19,37 @@ int main(int argc, char *argv[])
                 printf("%d: 'A'\n",i);
                 break;*/
 
-        if 
-
-            case 'e':
-            case 'E':
-                printf("%d: 'E'\n",i);
-                break;
-
-            case 'i':
-            case 'I':
-                printf("%d: 'I'\n",i);
-                break;
-
-            case 'o':
-            case 'O':
-                printf("%d: 'O'\n",i);
-                break;
-            
-            case 'u':
-            case 'U':
-                printf("%d: 'U'\n",i);
-                break;
-
-            case 'y':
-            case 'Y':
-                if(i > 2){
-                //why > 2? is this  a bug
-                    printf("%d: 'Y'\n",i);
-                }
-                break;
-
-            default:
-                printf("%d: %c is not a vowel\n", i, letter);
-            }    
+        if(letter == 'a'){
+            //how do you make %d == A
+            printf("%d, 'A'",i);
         }
+
+        if(letter == 'e'){
+            printf("%d, 'E'",i);
+        }
+
+
+        if(letter == 'i'){
+            printf("%d, 'I'",i);
+        }
+
+        if(letter == 'o'){
+            printf("%d, 'O'",i);
+        }
+
+
+        if(letter == 'u'){
+            printf("%d, 'U'",i);
+        }
+        
+        if(letter == 'y' && i > 2){
+            printf("%d: 'Y'\n",i);
+            break;
+        }
+        else{
+            printf("%d: %c is not a vowel\n", i, letter);
+        }
+    }
 
     return 0;
 }
