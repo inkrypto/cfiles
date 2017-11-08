@@ -21,30 +21,29 @@ int main(int argc, char *argv[])
 
         if(letter == 'a'){
             //how do you make %d == A
-            printf("%d, 'A'",i);
+            printf("%d, 'A'",letter);
         }
 
-        if(letter == 'e'){
+        else if(letter == 'e'){
             printf("%d, 'E'",i);
         }
 
 
-        if(letter == 'i'){
+        else if(letter == 'i'){
             printf("%d, 'I'",i);
         }
 
-        if(letter == 'o'){
+        else if(letter == 'o'){
             printf("%d, 'O'",i);
         }
 
 
-        if(letter == 'u'){
+        else if(letter == 'u'){
             printf("%d, 'U'",i);
         }
         
-        if(letter == 'y' && i > 2){
+        else if(letter == 'y' && i > 2){
             printf("%d: 'Y'\n",i);
-            break;
         }
         else{
             printf("%d: %c is not a vowel\n", i, letter);
