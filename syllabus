@@ -1,0 +1,88 @@
+UNIX C programming
+9 week course Fall 2017
+
+Learning goals
+	Using network sockets in C
+	Using Unix utilities such as:
+      Dup
+      Fork
+      Exec
+      Open/Read/Write
+      Receive/RECV
+      ERRNO
+      Wait
+      Kill
+      Pipe
+      Select
+      Poll
+
+What will you do
+	[1] Learn C The Hard Way
+	  X Make
+	  X Variables
+	  X If/Else
+	  X Loops/bools
+		X While/For
+    X Switch
+    X Array
+    X Sizes
+  For / Array of strings
+  Functions
+  Pointers
+	Structs
+	Memory Allocations
+	Function Pointers
+	C Error-Handling (Zeds debug macros)
+	Advanced debugging
+	Advanced data types & flow control
+	The stack, scope and globals
+	!!Meet Duff’s device (david to do this separately)
+	Input, Output, Files
+	Variable Argument Functions
+	Creative and Defensive Programming
+	Project logfind
+	Intermediate Makefiles
+	Libraries and Linking
+	Automated Testing
+	Double Linked Lists
+	!!Linked List Algorithms (david to do this separately)
+	Safer Strings
+	Hashmaps
+	Hashmap Algorithms
+	String Algorithms
+	Binary Search Trees
+	!!Project devpkg (david to do this seperately)
+	Stacks and Queues
+	A simple statistics engine
+	Ring Buffer
+	A Simple TCP/IP Client
+	A simple network server
+
+	[2] Unix Systems Programming
+	  Technology’s Impact on Programs
+	  Programs, Processes and Threads
+		  Do exercise 2.3 regarding executable sizes
+		  Use personal judgement re: examples experimenting
+			Definitely look at makeargv
+	  Processes in UNIX
+  Do Process Chain exercise
+  Do Process Fan exercise
+  UNIX I/O
+  Files and Directories
+  UNIX Special Files
+	  Do Barriers exercise
+  Project: The Token Ring (do as much as possible)
+  Signals
+  POSIX Threads
+	  Do Parallel File Copy exercise	
+
+  How will you know that you’ve succeeded
+  Able to write client and server.
+  Able to use simple unix IPC like pipe.
+  Able to write background programs (daemon).
+
+List of Resources
+	Learn C The Hard Way (study)
+	Unix Systems Programming (study)
+	Practical C Programming (support)
+	https://users.cs.cf.ac.uk/Dave.Marshall/C/ (support)
