@@ -3,22 +3,25 @@
 int main(int argc, char *argv[])
 {
     int i = 0;
-
-    for(i=1;i<argc; i++){
+    /* for(i=1;i<argc; i++){
         printf("arg %d: %s\n", i, argv[i]);
-    }
+    }*/
 
-    //lets make our own array of strings
-    /*char *states[] = {
-        "California", "Oregon",
+    char *states[] = {
+        "Oregon", "texas",
         "Washington", "Florida"
     };
 
     int num_states = 4;
-    
+    argv[1] = states[1];   
+ 
     for(i=0; i < num_states; i++){
         printf("state %d: %s\n", i, states[i]);
-    }*/
+    }
+
+    for(i=1; i < argc; i++){
+        printf("arg %d: %s\n", i, argv[i]);
+    }
 
     return 0;
 }
