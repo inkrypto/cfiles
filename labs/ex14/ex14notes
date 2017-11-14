@@ -1,0 +1,28 @@
+ex14.c:32-35 De necan_print_it,whichsimplyreturnsthetruthvalue(0or1)ofisalpha(ch) || isblank(ch) back to its caller, print_letters.
+
+1. why are isalpha and isblank not initialized?
+
+how come the author just didn't do
+"isalpha == 1 || isblank == 1"
+
+
+2. I received this error when I had char **argv on line 8:
+"ex14xtr.c: At top level:
+ex14xtr.c:30:5: error: conflicting types for ‘can_print_it’
+ int can_print_it(char ch)"
+
+adding the *argv[] fixed it.
+
+3. Last bullet on how to break it, need help
+❯ gcc -Wall -g ex14xtr.c -o ex14xtr
+ex14xtr.c: In function ‘main’:
+ex14xtr.c:37:25: error: subscripted value is neither array nor pointer nor vector
+     print_arguments(argc[1], argv);
+                         ^
+
+4. Extra credit 1, use ext14xtr to example
+
+5. look at the difference between xtr and xtr2. see that there is no number on xtr2, why
+
+6. Extra credit 2, look at 14
+Do this with David
