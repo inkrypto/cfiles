@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<ctype.h>
-#include<strings.h>
+#include<string.h>
 
 //forward declarations
 int can_print_it(char ch);
@@ -10,17 +10,14 @@ void print_arguments(int argc, char *argv[])
 {
     int i = 0;
 
-    chr str[50];
-
-    int len;
-
-    len = print_letters;
-
     for (i=0; i < argc; i++){
-       // strlen(print_letters(argv[i]));
-       (print_letters(argv[i]));
+        print_letters(argv[i]
+        //printf("%s\n", argv[i]);
         }
-    }
+        
+        // strlen(print_letters(argv[i]));
+        //int x = strlen(argv[i]);                //me trying to print length of argv
+}
 
 void print_letters(char arg[])
 {       int i = 0;
@@ -34,6 +31,7 @@ void print_letters(char arg[])
         }
     
     printf("\n");
+    //printf("%d is the length of argv.\n", x); 
 }
 
 int can_print_it(char ch)
