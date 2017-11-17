@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     int i = 0;
 
     //fist way using indexing
-    for(i=1; i < count; i++){
+    for(i=count-1; i >= 0; i--){
         printf("%s has %d years alive.\n", names[i], ages[i]);
     }
 
@@ -22,21 +22,22 @@ int main(int argc, char *argv[])
     char **cur_name = names;
 
     //seond way using pointers
-    for(i=0; i<count; i++){
+    for(i=4; i>=0; i--){
         printf("%s is %d years old.\n", *(cur_name + i), *(cur_age + i));
     }
 
     printf("---\n");
 
     //3rd way, pointers are just arrays
-    for(i = 0; i < count; i++){
-        printf("%s is %d years old again.\n" cur_name[1], cur_age[1]);
+    for(i = count-1; i >= 0; i--){
+        printf("%s is %d years old again.\n", cur_name[i], cur_age[i]);
     }
 
     printf("---\n");
 
-    //forth way with pointers is a stupid complex way
-    for (cur_name = names, cur_age = ages; (cur_age - ages) < count; cur_name++, cur_age++){
+    // fourth way with pointers in a stupid complex way
+    for (cur_name = names + (count - 1), cur_age = ages + (count - 1);
+            cur_age >= ages ;  cur_name--, cur_age--) {
         printf("%s lived %d years so far.\n", *cur_name, *cur_age);
     }
 
