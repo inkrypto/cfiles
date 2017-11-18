@@ -26,3 +26,10 @@ ex14xtr.c:37:25: error: subscripted value is neither array nor pointer nor vecto
 
 6. Extra credit 2, look at 14
 Do this with David
+
+7.teststrlen.c 
+    void print_letters(char arg[], int length) 
+    for (i = 0; i < length; i++) {
+where does length get initialized and does it contain strlen?
+
+
