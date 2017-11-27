@@ -1,0 +1,1 @@
+aptr2 question: Why does int *array={1,2,3} give a lot of warnings but int array[]={1,2,3} doesn't?
