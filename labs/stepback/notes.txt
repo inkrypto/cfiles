@@ -1,1 +1,7 @@
-aptr2 question: Why does int *array={1,2,3} give a lot of warnings but int array[]={1,2,3} doesn't?
+look at time.h formatting on str1.c
+
+look at linkedlist.c the struct stat *create(void) function returns baby. I thought voids don't do returns
+
+look at linked list how come line 11 is void function and line 14 is (void)
+
+
