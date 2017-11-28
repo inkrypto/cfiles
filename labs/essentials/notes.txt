@@ -1,0 +1,4 @@
+how come sometimes there's a trailing %?
+❯ ./2_4                                                                                                                                        ubuntu@ip-172-31-34-201
+day: 21 
+perimeter: 46.940000% //why is that percent there?
