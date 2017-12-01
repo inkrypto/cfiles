@@ -152,6 +152,16 @@ int main() {
             while (agnis->name_len <= 0 || agnis->name_len > 16) {                                      //check to make sure name is less than 17
                 printf("How many characters is your polars name? (must be less than 17) ");
                 scanf("%u", &agnis->name_len);
+                
+                int brentPatchLoop = strlen(&agnis->name_len);
+                printf("%d", brentPatchLoop);
+                break;
+/*                if( < 16))                                                        //brent's attempt to kill infinite loop 
+                {                    
+                    continue;
+                } else {
+                    break;
+                }*/
             }
             printf("What's your polars name? ");        
             fflush(stdout);
