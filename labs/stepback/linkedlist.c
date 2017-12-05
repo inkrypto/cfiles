@@ -63,7 +63,7 @@ void fill_structure(struct stats *s)    //function to fill in struct
 }
 
 //allocate storage for new structure
-struct stats *create(void)              //function to create pointer
+struct stats *create()              //function to create pointer
 {
     struct stats *baby;                 //where the fuck did baby come from
 

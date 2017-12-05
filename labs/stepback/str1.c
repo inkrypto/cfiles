@@ -37,8 +37,8 @@ int main()
     printf("%d\n", right_now->tm_year);
     
     //subtract time year from date year
-    int total = birthday->year-right_now->tm_year;   
- 
+    int thisYear = right_now->tm_year + 1900; 
+    int total = thisYear-birthday->year;   
     printf("You are %d years old.\n",total);
     
     return 0;
