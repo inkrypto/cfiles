@@ -2,3 +2,12 @@ how come sometimes there's a trailing %?
 ❯ ./2_4                                                                                                                                        ubuntu@ip-172-31-34-201
 day: 21 
 perimeter: 46.940000% //why is that percent there?
+
+
+12/5: ask David about the local array files on your computer arrayBrent.c and arrayprts.c. Actually I will work on them now so they are both on this server
+these files are in stepback
+
+OK so aptrBrent.c and arrayBrent.c I am trying to use an ...
+
+the library libm.a is not in /usr/lib nor /lib
+
