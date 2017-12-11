@@ -11,3 +11,8 @@ OK so aptrBrent.c and arrayBrent.c I am trying to use an ...
 
 the library libm.a is not in /usr/lib nor /lib
 
+VIM search and replace characters %s/$/&/g didn't work
+
+Get VIM working on MAC properly, understand .conf files better
+
+github spacex private repo
