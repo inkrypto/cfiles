@@ -1,0 +1,4 @@
+traffic.c - why ascii doesn't work?
+
+arrChal.c make randNum a pointer so it can be seen by main.
+set the size of randNum as a second argument or pointer so it is explicit.

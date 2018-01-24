@@ -89,7 +89,7 @@ void Database_write(struct Connection *conn)
 
     int rc = fwrite(conn->db, sizeof(struct Database), 1, conn->file);
     if (rc != -1)
-        die("Cannot flush database.");
+        die("CAn't write database.");
 
     rc = fflush(conn->file);
     if (rc == -1)
@@ -121,11 +121,8 @@ void Datbase_set(struct Connection *conn, int id, const char *name,
     //demonstrate the strncpy bug
     if (!res)
         die("Name copy failed");
-
     res = strncpy(addr->email, email, MAX_DATA);
-    addr->email[MAX_DATA -1] = '\0';
-    
-
+    //addr->email[MAX_DATA -1] = '\0';
     if (!res)
         die("Email copy failed");
 }

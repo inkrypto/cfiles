@@ -1,0 +1,85 @@
++---+---+---+---+----+
+| a | b | c | d | \0 |
++---+---+---+---+----+
+0   1   2   3   4
+
+char *ptr;
+
+ptr = "abcd";
+
+printf("ptr is at %p", ptr);
+
+// ptr is at 0
+
+printf("ptr is: %s", ptr);
+
+// ptr is: abcd
+
+ptr += 1;
+
+printf("ptr is at %p", ptr);
+
+// ptr is at 1
+
+printf("ptr is: %s", ptr);
+
+// ptr is: bcd
+
++---+---+---+---+----+
+| 1 | 2 | 3 | 4 | \0 |
++---+---+---+---+----+
+5   6   7   8   9
+
+char *ptr2;
+
+ptr2 = "1234";
+
+printf("ptr2 is at %p", ptr2);
+
+// ptr2 is at 5
+
+printf("ptr2 is: %s", ptr2);
+
+// ptr2 is: 1234
+
+ptr2 += 2;
+
+printf("ptr2 is at %p", ptr2);
+
+// ptr2 is at 7
+
+printf("ptr2 is: %s", ptr2);
+
+// ptr2 is: 34
+
++----------+----------+----------+
+| 00000001 | 00000005 | 00000000 |
++----------+----------+----------+
+10         14         18
+
+char **str_v = 10;
+
+printf("*str_v is at %p", *str_v);
+
+// *str_v is at 1
+
+printf("*str_v is: %s", *str_v);
+
+// *str_v is: bcd
+
+printf("*(str_v+1) is at %p", *(str_v+1));
+
+// *(str_v+1) = 5
+
+printf("*(str_v+1) is: %s", *(str_v+1));
+
+// *(str_v+1) is: 1234
+
+printf("( ( *(str_v+1) ) + 2) is at %p", ( *(str_v+1) ) + 2);
+
+// ( ( *(str_v+1) ) + 2) is at 7
+
+printf("( ( *(str_v+1) ) + 2) is: %s", ( *(str_v+1) ) + 2);
+
+// ( ( *(str_v+1) ) + 2) is: 34
+

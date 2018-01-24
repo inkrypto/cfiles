@@ -16,3 +16,9 @@ VIM search and replace characters %s/$/&/g didn't work
 Get VIM working on MAC properly, understand .conf files better
 
 github spacex private repo
+
+look at ex18 pointers. line 80 free(sorted); -- where is the sorted heap?
+line 87, what is argc - 1 =? 
+line 89, and that argv + 1 = char **inputs? is that because it's a pointer?
+
+
