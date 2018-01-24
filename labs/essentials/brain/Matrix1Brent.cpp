@@ -20,50 +20,50 @@ class Matrix {
 public:
     int rows;
     int columns;
-    Matrix(int row, int column);                                //the constructor       
-    void setvalue(int row, int column, int value);              //sets one value in row[i] and column[j]
-    int getvalue(int row, int column);                          //gets the value for a row/column index
-    void transpose();                                           //transposes matrix function
-    void printMatrix();                                 
-    ~Matrix();                                                  //the destructor
+    Matrix(int row, int column);                                        //the constructor       
+    void setvalue(int row, int column, int value);                      //sets one value in row[i] and column[j]
+    int getvalue(int row, int column);                                  //gets the value for a row/column index
+    void transpose();                                                   //transposes matrix function
+    void printMatrix();                                                 //print the matricies
+    ~Matrix();                                                          //the destructor
 };
 
 
-//Method to create the matrix
+//method to create the matrix
 Matrix::Matrix(int init_row, int init_column)  {
     int i;
-    matrix = (int **) malloc(sizeof(int *) * init_row);         //creates a 2d array for matrix in the heap
+    matrix = (int **) malloc(sizeof(int *) * init_row);                 //creates array in the heap
     for (i = 0; i < init_row; i++) {
-        matrix[i] = (int *) malloc(sizeof(int) * init_column);  //creates and index for that matrix
+        matrix[i] = (int *) malloc(sizeof(int) * init_column);  
         bzero(matrix[i], sizeof(int) * init_column);
     }
     rows = init_row;
     columns = init_column;
 }
 
-//Method to set the values in the matrix
+//method to set the values in the matrix
 void Matrix::setvalue(int row, int column, int value) {
     matrix[row][column] = value;
 }
 
-//Method to return the values row and column
+//method to get the values, row and column
 int Matrix::getvalue(int row, int column) {
     return matrix[row][column];
 }
 
-//Method transposing the matrix, switch the rows to columns and columns to rows
+//method transposing the matrix, switch the rows to columns and columns to rows
 void Matrix::transpose() {
     int i,j;
-    int **tmp_matrix;                                           //**tmp_matrix same as tmp_matrix[][]
-    tmp_matrix = (int **) malloc(sizeof(int *) * rows);         //dynamically create with malloc
+    int **tmp_matrix;                                                   //**tmp_matrix same as tmp_matrix[][]
+    tmp_matrix = (int **) malloc(sizeof(int *) * rows);                 //dynamically create with malloc
     for (i = 0; i < rows; i++) {
         tmp_matrix[i] = (int *) malloc(sizeof(int) * columns);
-        memcpy(tmp_matrix[i],matrix[i],sizeof(int) * columns);  //since it's a 2d array you have to do it to each array
+        memcpy(tmp_matrix[i],matrix[i],sizeof(int) * columns);          //since it's a 2d array you have to do it to each array
     }
     
     for(i=0; i<rows; i++) {
         for(j=0; j<columns; j++) {
-            matrix[j][i] = tmp_matrix[i][j];                    //switch them around
+            matrix[j][i] = tmp_matrix[i][j];                            //swap rows and columns
         }
     }
 
