@@ -3,7 +3,6 @@
 Name        : matrix.cpp
 Author      : Brent Morris
 Version     : 0.999999999999999999991
-De:w
 Description : A library to transpose and multiply a MxN matrix 
 ============================================================================
 */
