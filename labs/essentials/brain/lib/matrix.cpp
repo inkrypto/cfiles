@@ -1,8 +1,9 @@
 /*
 ============================================================================
-Name        : Matrix1.cpp
+Name        : matrix.cpp
 Author      : Brent Morris
-Version     : 8.9
+Version     : 0.999999999999999999991
+De:w
 Description : A library to transpose and multiply a MxN matrix 
 ============================================================================
 */
@@ -16,16 +17,25 @@ Description : A library to transpose and multiply a MxN matrix
 
 using namespace std;
 
-//method to create the matrix
+//constructor method to create the matrix object
 Matrix::Matrix(int init_row, int init_column)  {
     int i;
-    matrix = (int **) std::malloc(sizeof(int *) * init_row);                 //creates array in the heap
+    matrix = (int **) std::malloc(sizeof(int *) * init_row);                 
     for (i = 0; i < init_row; i++) {
         matrix[i] = (int *) std::malloc(sizeof(int) * init_column);  
         std::memset(matrix[i], 0, sizeof(int) * init_column);
     }
     rows = init_row;
     columns = init_column;
+}
+
+//destructor method
+Matrix::~Matrix() {
+    int i;
+    for (i = 0; i < rows; i++) {
+        std::free(matrix[i]);
+    }
+    std::free(matrix);
 }
 
 //method to set the values in the matrix
@@ -41,16 +51,16 @@ int Matrix::getvalue(int row, int column) {
 //method transposing the matrix, switch the rows to columns and columns to rows
 void Matrix::transpose() {
     int i,j;
-    int **tmp_matrix;                                                   //**tmp_matrix same as tmp_matrix[][]
-    tmp_matrix = (int **) std::malloc(sizeof(int *) * rows);                 //dynamically create with malloc
+    int **tmp_matrix;                                                   
+    tmp_matrix = (int **) std::malloc(sizeof(int *) * rows);                 
     for (i = 0; i < rows; i++) {
         tmp_matrix[i] = (int *) std::malloc(sizeof(int) * columns);
-        std::memcpy(tmp_matrix[i],matrix[i],sizeof(int) * columns);          //since it's a 2d array you have to do it to each array
+        std::memcpy(tmp_matrix[i],matrix[i],sizeof(int) * columns);         
     }
     
     for(i=0; i<rows; i++) {
         for(j=0; j<columns; j++) {
-            matrix[j][i] = tmp_matrix[i][j];                            //swap rows and columns
+            matrix[j][i] = tmp_matrix[i][j];                            
         }
     }
 
@@ -72,6 +82,7 @@ void Matrix::printMatrix() {
     }
 }
 
+//multiply matrix function not part of class
 void matrixMultiply(Matrix *a, Matrix *b, Matrix *c) {
     if (a->columns != b->rows) {
         // incorrect dimensions error
@@ -98,10 +109,3 @@ void matrixMultiply(Matrix *a, Matrix *b, Matrix *c) {
 
 */
 
-Matrix::~Matrix() {
-    int i;
-    for (i = 0; i < rows; i++) {
-        std::free(matrix[i]);
-    }
-    std::free(matrix);
-}

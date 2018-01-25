@@ -18,18 +18,18 @@ using namespace std;
 class Matrix {
     int **matrix;
 public:
-    int rows;
-    int columns;
     Matrix(int row, int column);                                        //the constructor       
+    ~Matrix();                                                          //the destructor
     void setvalue(int row, int column, int value);                      //sets one value in row[i] and column[j]
     int getvalue(int row, int column);                                  //gets the value for a row/column index
     void transpose();                                                   //transposes matrix function
     void printMatrix();                                                 //print the matricies
-    ~Matrix();                                                          //the destructor
+    int rows;
+    int columns;
 };
 
 
-//method to create the matrix
+//constructor method to create the matrix object
 Matrix::Matrix(int init_row, int init_column)  {
     int i;
     matrix = (int **) malloc(sizeof(int *) * init_row);                 //creates array in the heap
@@ -39,6 +39,15 @@ Matrix::Matrix(int init_row, int init_column)  {
     }
     rows = init_row;
     columns = init_column;
+}
+
+//destructor method to delete object
+Matrix::~Matrix() {
+    int i;
+    for (i = 0; i < rows; i++) {
+        free(matrix[i]);
+    }
+    free(matrix);
 }
 
 //method to set the values in the matrix
@@ -111,13 +120,6 @@ void matrixMultiply(Matrix *a, Matrix *b, Matrix *c) {
 
 */
 
-Matrix::~Matrix() {
-    int i;
-    for (i = 0; i < rows; i++) {
-        free(matrix[i]);
-    }
-    free(matrix);
-}
 
 //test
 int main(){

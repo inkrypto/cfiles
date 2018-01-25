@@ -3,8 +3,8 @@
 
 //test
 int main(){
-    Matrix a(3, 3);
-    a.setvalue(0, 0, 7);
+    Matrix a(3, 3);											//set the rows and columns for the matrix
+    a.setvalue(0, 0, 7);									//set the values for the indicies of the matrix, example('a1,1' = 7, 'a1,2' = 41, 'a1,3' = 52)
     a.setvalue(0, 1, 41);
     a.setvalue(0, 2, 52);
     a.setvalue(1, 0, 16);
@@ -14,13 +14,13 @@ int main(){
     a.setvalue(2, 1, 46);
     a.setvalue(2, 2, 746);
 
-//    puts("matrix a (before transpose):");
-    std::puts("matrix a:");
+    std::puts("matrix a:");									
     a.printMatrix();
-
-    a.transpose();
-    puts("matrix entered (after transpose):");
-    a.printMatrix();
+	
+	//comment out the transpose if you only want to multiply a * b
+    //a.transpose();
+    //puts("matrix entered (after transpose):");
+    //a.printMatrix();
 
     Matrix b(3, 3);
     b.setvalue(0, 0, 3);
@@ -36,6 +36,7 @@ int main(){
     std::puts("matrix b:");
     b.printMatrix();
 
+	//if you don't comment out the transpose then you'll have the transposed matrix * b
     std::puts("matricies multiplied together");
     Matrix c(a.rows, b.columns);
     matrixMultiply(&a,&b,&c);
