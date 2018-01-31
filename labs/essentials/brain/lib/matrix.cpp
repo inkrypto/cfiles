@@ -75,8 +75,8 @@ void Matrix::transpose() {
 void Matrix::print_matrix() {
     for (auto i = 0; i < rows; i++) {
         for (auto j = 0; j < columns; j++) {
-            std::printf("%d\t", get_value(i,j));
-                if(j == columns-1)
+            std::printf("%d\t", get_value(i, j));
+                if(j == columns - 1)
                     std::puts("\n");
         }
     }

@@ -1,0 +1,11 @@
+member vars at bottom -- done
+constructor followed by destructor -- done
+make destructor virtual -- don't know if worth it
+fuck overloading operator -- too complicated
+auto var in inner loops
+check row and columns
+linear array as a single array -- too complicated
+check for null -- ec malloc
+
+
+
