@@ -1,0 +1,19 @@
+Ci=(Pi + K) % 26
+plaintext A + 2 = C
+ascii 65 + 2 = 67
+
+alphabet 0 + 2 = 2
+
+'A' treats as an it
+('A'+2)%26 = (65+2)%26
+=67%26=15
+Use the formula above on to alphabet index
+	(0+2)%26 = 2%26 = 2 
+	C = 2i
+
+for every letter in secret, find which index it is in alphabet[]
+
+test:
+./caesar 13
+plaintext:  hello, world
+ciphertext: uryyb, jbeyq
