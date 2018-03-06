@@ -5,61 +5,82 @@
 
 #define N 10
 
+void create_random_list();
+void selection_sort();
+void find_x(int x);
+
+char numbers[N] = {};							// numbers // char *
+
 int main(int argc, char *argv[])
 {
+	if(argc != 2)
+	{
+		printf("USAGE, Guess a number 0 - 100 to see if it is in the list './find 18'\n");
+		return -1;
+	}
 	int x = atoi(argv[1]);
-	
-	// create an array of random numbers
+
+	create_random_list();
+	selection_sort();
+	find_x(x);
+}
+
+//Create an array of random numbers, using srand48 means only random the first time you run. to make random use srand, not srand48
+void create_random_list()
+{
 	srand48(time(NULL));
-	
-	char numbers[N] = {};				// numbers // char *
 	
 	printf("unsorted array[numbers]: \n");
 	for(int i = 0; i < N; i++)
 		{
-			numbers[i] = rand() % 100;	// numbers[i] // char
-			printf("%d, ", numbers[i]);
+			numbers[i] = rand() % 100;			// numbers[i] // char
+			printf("%d\n", numbers[i]);
 		}
 	puts("\n");	
+}	
 
-/* SELECTION SORT
+/* 
+SELECTION SORT
 for i = 0 to n - 2
 	min = i
 	for j = i to n
 		find index of max value
 	swap array[min] and array[i]
 */
-
-	int min_idx = 0;
-	for(int i = 0; i <= N - 2; i++)
+void selection_sort()
+{
+	int i, j;
+	int min_idx = 0;							//minimum value in the index variable
+	for(i = 0; i <= N - 2; i++)
 	{
-		min_idx = i;
-	
-		for(int j = i; j <= N - 1; j++)
+		min_idx = i;							//move minimun value through index 
+		
+		for(j = i; j <= N - 1; j++)				//loop again to set up comparison
 		{
-			if(numbers[j] < numbers[min_idx])
+			if(numbers[j] < numbers[min_idx])	//if j bigger than minimum
 			{
-				min_idx = j;
+				min_idx = j;					//move min value into j
 			}
 		}
 		
-		if(numbers[min_idx] != numbers[i])
+		if(numbers[min_idx] != numbers[i])		//if min not in the new list
 		{
-			int temp = 0;
-			temp = numbers[min_idx];
-			numbers[min_idx] = numbers[i];
-			numbers[i] = temp;
+			int temp = 0;						//set up a swap variable
+			temp = numbers[min_idx];			//move min into swap
+			numbers[min_idx] = numbers[i];		//make min equal to i
+			numbers[i] = temp;					//make i equal to swap
 		}
 	}
 
 	puts("sorted array[numbers]: ");
 	for(int i = 0; i < N; i++)
 	{
-		printf("%d, ", numbers[i]);
+		printf("%d\n", numbers[i]);
 	}
-	getchar();
+}
 
-/* SEARCH for number in sorted list 
+/* 
+SEARCH for number in sorted list 
 while length of list > 0;
 	look at middle of list
 	if number found, return true
@@ -67,6 +88,8 @@ while length of list > 0;
 	else if number lower, search right
 return false
 */
+void find_x(int x)
+{
 	int middle_idx = (N / 2) - 1;
 	int lower_mid = (middle_idx / 2);
 
